@@ -1,0 +1,146 @@
+.btn{
+  
+    min-width: 139px;
+    line-height:.9em;
+    padding: .9rem 2.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.header__container{
+    display: flex;
+    margin:auto
+}
+.body__header__img{
+    background-image: url(../img/img-package/head-pic.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 28rem;
+    position: relative;
+}
+.body__header__img-item{
+    position:relative;
+    height: 100%;
+    width: 100%;
+}
+.body__header__img-text{
+    position:absolute;
+    bottom: 1.8em;
+    left: 1em;
+    color: var(--white-color);
+    font-size: 4rem;
+    z-index: 1;
+
+}
+/* body */
+.body-description{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin:auto;
+    text-align:center;
+    padding: 4em 3em
+}
+.body-description__introduce{
+    font-size:30px;
+    font-weight: 700;
+}
+.body-description__introduce2__conainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size:14px;
+    line-height:27px;
+    letter-spacing:1px;
+    font-weight: 400;
+    color: #9a9a9a;
+    margin:1em 0
+}
+/* video */
+.body-video-container{
+    margin: auto;
+    height: 50em;
+    width:100%;
+    padding:1em;
+
+}
+.body-video{
+    background-image: url(../img/blog-img/blog-02.jpg);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.body-video-btn{
+    display:block;
+    height: fit-content;
+    width: fit-content;
+}
+
+.body-video-btn img{
+    margin:auto;
+    height:10em;
+    cursor: pointer;
+    transition: all 0.5s ease
+}
+.body-video-btn img:hover{
+    opacity: .5;
+}
+.packages__video-content__srcVideo{
+    position:fixed;
+    top: 0;
+    left:0;
+    right:0;
+    height:100vh;
+    background-color:rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.9s ease;
+    animation: video ease 0.5s
+}
+
+.body-staff-container{
+    margin:2em auto
+}
+.body-staff-content{
+    height:50em
+}
+.body-staff-background{
+    background-image: url(../img/aboutus/para-05.jpg);
+    height:100%;
+    padding:0 1em;
+    background-position-y: -10em ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3em;
+    color:var(--white-color);
+    text-align: center;
+}
+.body-staff-title{
+    font-size:50px;
+    line-height:50px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.body-staff-paragraph{
+    font-size:1.5rem;
+    line-height:25px;
+    letter-spacing: 2px;
+    font-weight: 300
+}
+.body-staff-btn{
+    font-size:2rem;
+    padding:.9em 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-color:var(--main-color)
+}

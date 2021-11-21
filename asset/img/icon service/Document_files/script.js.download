@@ -1,0 +1,197 @@
+const $ = document.querySelector.bind(document)
+const $$ = document.querySelectorAll.bind(document)
+const srcVideo = $('.packages__video-content__srcVideo')
+const body = $('body')
+const playVideoBtn = $('.packages__video-content')
+const mainPicContainer = $('.main-pic')
+const video = $('.packages__video-content__srcVideo-item')
+const navBtn = $('.header__logo-brand__navBtn')
+const listNavSide = $('.header__navbar-flow__container')
+const closeNavBtn = $('.header__navbar-flow__iconClose')
+let length = 0
+let btnPrev = $('.main-pic__switchPageIcon__prev')
+let btnNext = $('.main-pic__switchPageIcon__next')
+let mainPicArr=['asset/img/slide-01.jpg','asset/img/slide-02.jpg']
+let mainPic = $('.main-pic__item')
+mainPic.style.backgroundImage = `url(${mainPicArr[0]})`
+console.log(mainPic)
+
+run()
+function run() {
+    mainPicSwitcher()
+    playVideo()
+    navBtnToggle()
+}
+
+
+function mainPicSwitcher() {
+    let autoplay=setInterval(()=>{
+        length++
+        if(length >= mainPicArr.length){
+            length=0
+        }
+        setTimeout(function(){
+            mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
+            mainPic.innerHTML = `  <div class="main-pic__item" >
+    
+            <div class="grid main-pic__item-container-form">
+                <div class="main-pic__item-container">
+                   <div class="main-pic__item__banner">
+                       <div class="main-pic__item__banner-item">
+                           Enjoy <span>Your</span> Holiday
+                       </div>
+                       <div class="main-pic__item__banner-item">
+                           with Our <span>Agency</span>
+                       </div>
+                   </div>
+    
+                   <div class="main-pic__item__description">
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>spectacular things to do best </span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>local guide available</span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>all inclusive family holiday for all season</span>
+                       </div>
+                   </div>
+    
+                   <div class="btn main-pic__item__btn">
+                       buy the tour
+                       <span class="main-pic__item__btn__discount">$25</span>
+                   </div>
+                </div>  
+              </div>
+    
+           </div>`
+        },300)
+    },9000)
+
+    btnNext.onclick = () =>{
+        length++
+        if(length >= mainPicArr.length){
+            length=0
+        }
+        setTimeout(function(){
+            mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
+            mainPic.innerHTML = `  <div class="main-pic__item" >
+    
+            <div class="grid main-pic__item-container-form">
+                <div class="main-pic__item-container">
+                   <div class="main-pic__item__banner">
+                       <div class="main-pic__item__banner-item">
+                           Enjoy <span>Your</span> Holiday
+                       </div>
+                       <div class="main-pic__item__banner-item">
+                           with Our <span>Agency</span>
+                       </div>
+                   </div>
+    
+                   <div class="main-pic__item__description">
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>spectacular things to do best </span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>local guide available</span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>all inclusive family holiday for all season</span>
+                       </div>
+                   </div>
+    
+                   <div class="btn main-pic__item__btn">
+                       buy the tour
+                       <span class="main-pic__item__btn__discount">$25</span>
+                   </div>
+                </div>  
+              </div>
+    
+           </div>`
+        },300)
+    clearInterval(autoplay)
+    }
+
+    btnPrev.onclick = () =>{
+        length--
+        if(length < 0){
+            length = mainPicArr.length-1
+        }
+        setTimeout(function(){
+            mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
+            mainPic.innerHTML = `  <div class="main-pic__item" >
+    
+            <div class="grid main-pic__item-container-form">
+                <div class="main-pic__item-container">
+                   <div class="main-pic__item__banner">
+                       <div class="main-pic__item__banner-item">
+                           Enjoy <span>Your</span> Holiday
+                       </div>
+                       <div class="main-pic__item__banner-item">
+                           with Our <span>Agency</span>
+                       </div>
+                   </div>
+    
+                   <div class="main-pic__item__description">
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>spectacular things to do best </span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>local guide available</span>
+                       </div>
+                       <div class="main-pic__item__description-item">
+                           <i class="main-pic__item__description-item__star fas fa-star"></i>
+                           <span>all inclusive family holiday for all season</span>
+                       </div>
+                   </div>
+    
+                   <div class="btn main-pic__item__btn">
+                       buy the tour
+                       <span class="main-pic__item__btn__discount">$25</span>
+                   </div>
+                </div>  
+              </div>
+    
+           </div>`
+        },300)
+        clearInterval(autoplay)
+    
+    }
+}
+
+
+
+
+function playVideo(){
+    playVideoBtn.onclick = function() {
+        srcVideo.style.display='flex'
+        body.style.overflow = 'hidden'
+       
+    }
+    
+    srcVideo.onclick = function() {
+        srcVideo.style.display='none'
+        body.style.overflow = 'auto'
+        var iframeSrc = video.src;
+            video.src = iframeSrc;
+    }
+}
+
+
+function navBtnToggle() {
+    navBtn.onclick= () =>{
+        listNavSide.classList.toggle('active')
+    }
+    closeNavBtn.onclick= () =>{
+        listNavSide.classList.remove('active')
+
+    }
+}

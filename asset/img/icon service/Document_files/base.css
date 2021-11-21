@@ -1,0 +1,154 @@
+
+:root{
+    --main-color:#f3a46b;
+    --white-color:white;
+    --gray-color:#555555;
+    --text-color:#727475
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+
+}
+.grid{
+    max-width: 100%;
+    width: 1200px
+}
+.grid-row{
+    display: flex;
+    flex: wrap;
+}
+.btn{
+  
+    color:var(--white-color);
+    min-width: 139px;
+    line-height:.9em;
+    padding: .9rem 2.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.underline::after{
+    position: absolute;
+    content: "";
+    height: 6px;
+    width:5.5em;
+    bottom:-0.4em;
+    right: 23px;
+    z-index: -1;
+}
+
+.app__sale__item1 .app__sale__item-pic-logoSale{
+    display: none
+}
+
+@keyframes rotate{
+    from{transform: rotate(360deg) translateX(3px) rotate(-360deg);}
+    to{transform: rotate(0deg) translateX(3px) rotate(0deg);}
+}
+@keyframes moveLeft{
+    from{transform:translateX(-300px);
+        opacity:0.5
+    }
+    to{transform:translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveRight{
+    from{transform:translateX(150px);
+        opacity:0.5
+    }
+    to{transform:translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes moveUp{
+    from{transform:translateY(100px) scale(0);
+        opacity:0;
+        
+        /* font-size:50%; */
+    }
+    to{transform:translateX(0px) scale(1);
+        opacity: 1;
+        /* font-size:100% */
+        
+    }
+}
+@keyframes moveBtn{
+    from{transform: scaleY(0);
+        opacity:0;
+        
+        /* font-size:50%; */
+    }
+    to{transform: scaleY(1);
+        opacity: 1;
+        /* font-size:100% */
+        
+    }
+}
+@keyframes video{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* responsive */
+
+@media screen and (max-width:1200px){
+
+    .header__btn-book,
+    .header__item-header{
+        display:none
+    }
+    .header__logo-brand__navBtn{
+        display:block ;
+        margin:10px
+    }
+    .header__logo-brand{
+        text-align:center;
+        margin:auto;
+    }
+    .header__container{
+        display: flex;
+        flex-direction: column;
+        height:131px ;
+    }
+
+    /* body */
+    .app__packages{
+        flex-direction: column;
+        margin-top:-155px;
+        padding:0;
+        height:fit-content
+    }
+    .packages__description{
+        flex-direction:column ;
+    }
+    .packages__items-container{
+        position:static ;
+        bottom:0 ;
+        left:0 ;
+        display:block
+    }
+    .packages__description-content{
+        flex-direction: column;
+        width:100%;
+        gap:.3em
+    }
+    .packages__description-content p{
+        width:100% 
+
+    }
+}
+
+
