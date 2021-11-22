@@ -544,7 +544,8 @@ header{
 
 @media  (min-width: 769px) {
     .grid2{
-        width: 653px
+        /* width: 653px */
+        width: 736px
     }
   
 }

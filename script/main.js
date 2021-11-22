@@ -49,7 +49,7 @@ function mainPicSwitcher() {
             mainPic.innerHTML = ` 
             
     
-            <div class="grid main-pic__item-container-form">
+            <div class="grid2 main-pic__item-container-form">
                 <div class="main-pic__item-container">
                    <div class="main-pic__item__banner">
                        <div class="main-pic__item__banner-item">
@@ -103,7 +103,7 @@ function mainPicSwitcher() {
             mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
             mainPic.innerHTML = ` 
     
-            <div class="grid main-pic__item-container-form">
+            <div class="grid2 main-pic__item-container-form">
             <div class="main-pic__item-container">
                <div class="main-pic__item__banner">
                    <div class="main-pic__item__banner-item">
@@ -154,7 +154,7 @@ function mainPicSwitcher() {
             mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
             mainPic.innerHTML = `  
     
-            <div class="grid main-pic__item-container-form">
+            <div class="grid2 main-pic__item-container-form">
             <div class="main-pic__item-container">
                <div class="main-pic__item__banner">
                    <div class="main-pic__item__banner-item">
@@ -197,13 +197,12 @@ function mainPicSwitcher() {
     // document.documentElement.style.setProperty('--width_slideBar',"0%")
 
 }
-
-var numMinus = 0
+let width = window.innerWidth;
+console.log(width);
 var heightMainPic = $('.main-pic__item')
-heightMainPic.style.height='800px'
+heightMainPic.style.height=`${width}px`
 var onresize = function() {
-    width = window.innerWidth;
-    numMinus+=3.2
+     width = window.innerWidth;
     // width%2==0?numMinus++:0
     // btnMainPic.style.padding
 
