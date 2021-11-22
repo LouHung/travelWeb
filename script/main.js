@@ -46,7 +46,8 @@ function mainPicSwitcher() {
                 mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
             }else{
             mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
-            mainPic.innerHTML = `  <div class="main-pic__item" >
+            mainPic.innerHTML = ` 
+            
     
             <div class="grid main-pic__item-container-form">
                 <div class="main-pic__item-container">
@@ -82,7 +83,6 @@ function mainPicSwitcher() {
                 <div class="main-pic__item__btn2 btn">
                 buy the tour
             </div>  
-              </div>
     
            </div>`
             }
@@ -101,42 +101,44 @@ function mainPicSwitcher() {
         }
         setTimeout(function(){
             mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
-            mainPic.innerHTML = `  <div class="main-pic__item" >
+            mainPic.innerHTML = ` 
     
             <div class="grid main-pic__item-container-form">
-                <div class="main-pic__item-container">
-                   <div class="main-pic__item__banner">
-                       <div class="main-pic__item__banner-item">
-                           Enjoy <span>Your</span> Holiday
-                       </div>
-                       <div class="main-pic__item__banner-item">
-                           with Our <span>Agency</span>
-                       </div>
+            <div class="main-pic__item-container">
+               <div class="main-pic__item__banner">
+                   <div class="main-pic__item__banner-item">
+                       Enjoy <span>Your</span> Holiday
                    </div>
-    
-                   <div class="main-pic__item__description">
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>spectacular things to do best </span>
-                       </div>
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>local guide available</span>
-                       </div>
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>all inclusive family holiday for all season</span>
-                       </div>
+                   <div class="main-pic__item__banner-item">
+                       with Our <span>Agency</span>
                    </div>
-    
-                   <div class="btn main-pic__item__btn">
-                       buy the tour
-                       <span class="main-pic__item__btn__discount">$25</span>
+               </div>
+
+               <div class="main-pic__item__description">
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>spectacular things to do best </span>
                    </div>
-                </div>  
-              </div>
-    
-           </div>`
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>local guide available</span>
+                   </div>
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>all inclusive family holiday for all season</span>
+                   </div>
+               </div>
+
+               <div class="btn main-pic__item__btn">
+                   buy the tour
+                   <span class="main-pic__item__btn__discount">$25</span>
+               </div>
+            </div>
+            <div class="main-pic__item__btn2 btn">
+            buy the tour
+        </div>  
+
+       </div>`
         },300)
     clearInterval(autoplay)
     }
@@ -150,42 +152,44 @@ function mainPicSwitcher() {
         }
         setTimeout(function(){
             mainPic.style.backgroundImage = `url(${mainPicArr[length]})`
-            mainPic.innerHTML = `  <div class="main-pic__item" >
+            mainPic.innerHTML = `  
     
             <div class="grid main-pic__item-container-form">
-                <div class="main-pic__item-container">
-                   <div class="main-pic__item__banner">
-                       <div class="main-pic__item__banner-item">
-                           Enjoy <span>Your</span> Holiday
-                       </div>
-                       <div class="main-pic__item__banner-item">
-                           with Our <span>Agency</span>
-                       </div>
+            <div class="main-pic__item-container">
+               <div class="main-pic__item__banner">
+                   <div class="main-pic__item__banner-item">
+                       Enjoy <span>Your</span> Holiday
                    </div>
-    
-                   <div class="main-pic__item__description">
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>spectacular things to do best </span>
-                       </div>
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>local guide available</span>
-                       </div>
-                       <div class="main-pic__item__description-item">
-                           <i class="main-pic__item__description-item__star fas fa-star"></i>
-                           <span>all inclusive family holiday for all season</span>
-                       </div>
+                   <div class="main-pic__item__banner-item">
+                       with Our <span>Agency</span>
                    </div>
-    
-                   <div class="btn main-pic__item__btn">
-                       buy the tour
-                       <span class="main-pic__item__btn__discount">$25</span>
+               </div>
+
+               <div class="main-pic__item__description">
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>spectacular things to do best </span>
                    </div>
-                </div>  
-              </div>
-    
-           </div>`
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>local guide available</span>
+                   </div>
+                   <div class="main-pic__item__description-item">
+                       <i class="main-pic__item__description-item__star fas fa-star"></i>
+                       <span>all inclusive family holiday for all season</span>
+                   </div>
+               </div>
+
+               <div class="btn main-pic__item__btn">
+                   buy the tour
+                   <span class="main-pic__item__btn__discount">$25</span>
+               </div>
+            </div>
+            <div class="main-pic__item__btn2 btn">
+            buy the tour
+        </div>  
+
+       </div>`
         },300)
         clearInterval(autoplay)
     
@@ -194,6 +198,19 @@ function mainPicSwitcher() {
 
 }
 
+var numMinus = 0
+var heightMainPic = $('.main-pic__item')
+heightMainPic.style.height='800px'
+var onresize = function() {
+    width = window.innerWidth;
+    numMinus+=3.2
+    // width%2==0?numMinus++:0
+    // btnMainPic.style.padding
+
+    heightMainPic.style.height= `${width}px`
+    // console.log(btnMainPic)
+}
+window.onresize = onresize
 
 
 

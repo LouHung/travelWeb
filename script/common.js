@@ -9,13 +9,24 @@ const navBtn = $('.header__logo-brand__navBtn')
 const listNavSide = $('.header__navbar-flow__container')
 const closeNavBtn = $('.header__navbar-flow__iconClose')
 const media750px = window.matchMedia("(max-width:750px)")
+console.log(body)
 
-
-run()
-function run() {
-    navBtnToggle()
+console.log(body.classList.value)
+switch(body.classList.value){
+    case 'aboutUs': 
     playVideo()
-
+    navBtnToggle()
+        break;
+    case 'shop': 
+    navBtnToggle()
+        break;
+    case 'home': 
+    playVideo()
+    navBtnToggle()
+        break;  
+    case 'package': 
+    navBtnToggle()
+        break;   
 }
 
 function navBtnToggle() {
