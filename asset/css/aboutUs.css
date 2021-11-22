@@ -6,6 +6,9 @@
     border-radius: 50px;
     cursor: pointer;
 }
+.grid2{
+    width:314px
+}
 .header__container{
     display: flex;
     margin:auto
@@ -108,39 +111,214 @@
     margin:2em auto
 }
 .body-staff-content{
-    height:50em
+    height:70em;
+    width: 100%;
 }
 .body-staff-background{
     background-image: url(../img/aboutus/para-05.jpg);
     height:100%;
     padding:0 1em;
-    background-position-y: -10em ;
     background-size: cover;
     background-repeat: no-repeat;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap:3em;
     color:var(--white-color);
     text-align: center;
+    position:relative;
+    width:100%;
+    background-position-y: var(--position-pic-flow);
+    background-position-x:center ;
 }
+.body-staff-description{
+    width:fit-content;
+    z-index: 2;
+    display: flex;
+    flex-direction:column;
+    gap:3em;
+    text-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+}
+/* s */
 .body-staff-title{
     font-size:50px;
     line-height:50px;
     letter-spacing: 1px;
     font-weight: 700;
+    
 }
 .body-staff-paragraph{
     font-size:1.5rem;
     line-height:25px;
     letter-spacing: 2px;
-    font-weight: 300
+    font-weight: 400
 }
 .body-staff-btn{
     font-size:2rem;
-    padding:.9em 1em;
+    padding:.6em 1em;
     font-weight: 400;
     text-transform: uppercase;
     background-color:var(--main-color)
+}
+/* owner */
+.body-staff__owner-container{
+    margin:auto;
+    padding:0 2em;
+    display:flex;
+    flex-direction:column;
+    gap:3em;
+    align-items:center;
+    transform: translateY(-10em)
+}
+.body-staff__owner-item{
+    text-align: center;
+    width: 24em;
+    display: flex;
+    flex-direction: column;
+    gap:2em
+
+}
+.body-staff__owner-item__pic{
+    display:block;
+    width:100%
+}
+.body-staff__owner-item__pic img{
+    width:100%
+
+}
+.body-staff__owner-item__name{
+    font-size: 25px ;
+    font-weight: 700;
+    line-height:25px;
+    letter-spacing:1px;
+    color:#555555;
+   
+}
+.body-staff__owner-item__name-position{
+    font-size: 12px ;
+    letter-spacing:3px;
+    font-weight: 200;
+    color:#9a9a9a;
+    text-transform: uppercase;
+}
+.body-staff__owner-item__description{
+    font-size: 14px ;
+    letter-spacing:1px;
+    line-height:27px;
+    font-weight: 400;
+    color:#9a9a9a
+}
+.body-staff__owner-item__btn{
+    font-size: 13px ;
+    letter-spacing:1px;
+    line-height:13px;
+    font-weight: 400;
+    color:#9a9a9a;
+    text-transform: uppercase;
+    border: 1px solid #9a9a9a;
+    padding: 0.3em 1em;
+}
+/* our destinations */
+.body-destination-tour-container{
+    margin-top:7em
+}
+.body-destination-container{
+    margin:auto;
+    text-align:center;
+}
+.body-destination-tour__item__state,
+.body-destination-title{
+    text-transform: uppercase;
+}
+
+.body-destination-title1{
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing:2px;
+    font-weight: 400;
+    color:#9a9a9a
+}
+.body-destination-title2{
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    color:#555555;
+    margin-top:.7em;
+    position:relative;
+}
+.body-destination-title2::after{
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    width:100%;
+    z-index: 2;
+}
+.body-destination-tour__group{
+    width: 100%;
+    padding:0 1em;
+
+}
+.body-destination-tour__item{
+    display: flex;
+    justify-content: space-between;
+    height:6em;
+    margin:2em 0
+}
+.body-destination-tour__item-title,
+.body-destination-tour__item__price__group{
+    height:100%
+}
+.body-destination-tour__item-title{
+    text-align: left;
+}
+
+.body-destination-tour__item__price,
+.body-destination-tour__item-title__name{
+    font-size: 17px;
+    line-height:17px;
+    letter-spacing:1px;
+    font-weight: 700;
+    color:#555555
+}
+.body-destination-tour__item-title__description{
+    font-size: 14px;
+    line-height:27px;
+    letter-spacing:1px;
+    font-weight: 200;
+    color:#9a9a9a
+}
+
+.body-destination-tour__item__price__group{
+    display:flex;
+    flex-direction: column;
+    text-align: right;
+}
+.body-destination-tour__item__state{
+    padding:.2em .8em;
+    border-radius: 13px;
+    font-size:13px;
+    letter-spacing:1px;
+    font-weight: 400;
+    color: var(--white-color);
+    text-align: center;
+    margin-top:.5em
+}
+.body-destination-tour__item__state-color-orange{
+    background-color: var(--main-color);
+}
+.body-destination-tour__item__state-color-red{
+    background-color: #f76570
+}
+.body-destination-tour__item__state-color-stransparent{
+    color:#9a9a9a;
+    border:1px solid #9a9a9a;
+    display: block
+}
+.body-destination-tour__item-title__description,
+.body-destination-tour__item__state-wrap{
+    margin-top:10px
+}
+.body-destination-tour__group{
+
 }
