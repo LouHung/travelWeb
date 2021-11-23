@@ -180,9 +180,13 @@ header{
 }
 .header__btn-book{
     background-color:  var(--main-color);
+}
+.main-pic__item__btn2 a,
+.header__navbar-flow__item-name a,
+.header__btn-book a{
+    text-decoration: none;
     color: var(--white-color);
 }
-
 
 .header__item-header__expand{
     position:absolute;
@@ -403,6 +407,20 @@ header{
     transform: translateX(100%);
     z-index:7
 }
+.blackBackground{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 2;
+    display:none
+}
+.blackBackground.active{
+    display:block
+}
 .header__navbar-flow__item-name{
     font-size:24px;
     font-weight: 400;
@@ -447,6 +465,7 @@ header{
         display: flex;
         flex-direction: column;
         height:131px ;
+        margin:auto;
     } 
     
     .body-package-input{

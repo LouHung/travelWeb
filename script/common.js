@@ -8,6 +8,7 @@ const video = $('.packages__video-content__srcVideo-item')
 const navBtn = $('.header__logo-brand__navBtn')
 const listNavSide = $('.header__navbar-flow__container')
 const closeNavBtn = $('.header__navbar-flow__iconClose')
+const background = $('.blackBackground')
 const media750px = window.matchMedia("(max-width:750px)")
 console.log(body)
 
@@ -15,34 +16,56 @@ console.log(body.classList.value)
 switch(body.classList.value){
     case 'aboutUs': 
     playVideo()
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;
     case 'shop': 
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;
     case 'home': 
     playVideo()
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;  
     case 'packages': 
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;   
     case 'ourNews':
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;
     case 'contact':
-    navBtnToggle()
+    openNavMenu()
+    closeNavMenu()
         break;
 }
 
-function navBtnToggle() {
-    navBtn.onclick= () =>{
-        listNavSide.classList.toggle('active')
+function closeNavMenu() {
+    background.onclick= () =>{
+        listNavSide.classList.remove('active')
+        background.classList.remove('active')
+        body.style.overflow = 'auto'
     }
     closeNavBtn.onclick= () =>{
         listNavSide.classList.remove('active')
+        background.classList.remove('active')
+        body.style.overflow = 'auto'
 
     }
+}
+
+function openNavMenu() {
+    
+    navBtn.onclick= () =>{
+        background.classList.add('active')
+        listNavSide.classList.add('active')
+        body.style.overflow = 'hidden'
+
+    }
+   
+    
 }
 
 function playVideo(){
@@ -58,4 +81,9 @@ function playVideo(){
         var iframeSrc = video.src;
             video.src = iframeSrc;
     }
+}
+
+function toggleBackground(){
+    
+    
 }
