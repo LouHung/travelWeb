@@ -21,6 +21,7 @@
     background-position: center center;
     height: 28rem;
     position: relative;
+    z-index: 0;
 }
 .body-staff-background::after,
 .body-experience-container::after,

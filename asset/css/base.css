@@ -283,6 +283,7 @@ header{
     min-height:500px;
     display: flex;
     position: relative;
+    margin-top:4em
 }
 .footer__container{
     margin:auto;

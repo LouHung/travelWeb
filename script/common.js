@@ -24,9 +24,15 @@ switch(body.classList.value){
     playVideo()
     navBtnToggle()
         break;  
-    case 'package': 
+    case 'packages': 
     navBtnToggle()
         break;   
+    case 'ourNews':
+    navBtnToggle()
+        break;
+    case 'contact':
+    navBtnToggle()
+        break;
 }
 
 function navBtnToggle() {

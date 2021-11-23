@@ -692,7 +692,8 @@ opacity: 0.5;
 .articlesAndNews__block-container{
     display: flex;
     flex-direction: column;
-    gap:3em
+    gap:3em;
+    padding:0;
 }
 .articlesAndNews__block-item{
     display: flex;
@@ -800,11 +801,7 @@ opacity: 0.5;
 
 
 
-    .grid{
-        max-width: 100%;
-        width: 600px;
-        margin:auto
-    }
+    
     .packages__description-title{
         line-height:35px;
 
@@ -821,9 +818,7 @@ opacity: 0.5;
     }
     
     
-    .articlesAndNews__block-container{
-        padding:0;
-    }
+    
     
    .articlesAndNews__block-item-description{ 
        /* width:100%; */
