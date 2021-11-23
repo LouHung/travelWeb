@@ -76,7 +76,6 @@ select {
         justify-content: center;
         width:100%;
         gap:2em;
-        cursor: pointer;
         /* align-items: center; */
     }
     .body-package-input__range-price-content,
@@ -111,6 +110,7 @@ select {
          top:12px
 
     }
+   
     .body-package-input__select-day,
     .body-package-input__select-choose__content{
         border: none;
@@ -122,7 +122,7 @@ select {
         padding: 1.1em 1.6em ;
         background-color:  #f9f9f9;
         border-radius: 50px;
-        
+        cursor: pointer;
     }
     .body-package-input__select-day::placeholder{
         font-weight: 400;
@@ -253,10 +253,14 @@ select {
     text-shadow: 0 0.2rem .2rem rgba(0, 0, 0, 0.3);
     transition: background-color 0.2s ease
 }
+
 .days div:hover:not(.today){
-    background-color:#4e4e4e;
+    background-color:#6e6e6e;
     border: 0.2rem solid #777777;
     cursor: pointer;
+}
+.day-was-chosen{
+    background-color:#6e6e6e;
 }
 
 .prev-date,
@@ -440,6 +444,7 @@ left: 30%;
 .app__sale__item6 .app__sale__item-point-mark{
     background-color:#1bbc9b
 }
+.app__sale__item-point-price--new,
 .app__sale__item-point-price{
     font-size: 25px;
     display:flex;

@@ -2,8 +2,17 @@ const valueSlideBar = $('.body-package-input__range-price-value')
 const rangeSlider =  $('.body-package-input__slice-price')
 const filterBtn = $('.body-package-input__filter__btn')
 
+
+// const price=Array.from($$('.app__sale__item-point-price--new'));
+// price.map((value)=>{
+//     var num = parseInt(value.innerText.split(' ')[0])
+//     console.log(num);
+// })
+// console.log(price)
 rangeSlider.oninput = function(){
     valueSlideBar.innerHTML = rangeSlider.value
+    console.log(rangeSlider.value);
+
 // change value slide bar
     var value = (this.value-this.min)/(this.max-this.min)*100
     this.style.background = 'linear-gradient(to right, #f76570 0%, #f76570 ' + value + '%, #e4e4e4 ' + value + '%, #e4e4e4 100%)'
@@ -27,6 +36,7 @@ let months = [
 const date = new Date()
 let currentMonth
 let currentYear
+renderCalendar()
 
 function renderCalendar() {
 let days = ""
@@ -50,7 +60,7 @@ let monthDays = $(".days")
     }
    
    
-    //highlight date,render curent month
+    //highlight date,render current month
     for(let i = 1; i <= lastDate; i++){
         if( i=== new Date().getDate() && date.getMonth() === new Date().getMonth()){
         days += `<div class = "today">${i}</div>`
@@ -81,17 +91,18 @@ $('.next').addEventListener('click',()=>{
     renderCalendar()
 })
 
-renderCalendar()
 
 const calendar = $('.calendar__container')
 const inputCalendar = $('.body-package-input__select-day')
+const iconCalendar = $('.body-package-input__select-icon-calendar')
 inputCalendar.onfocus = (e) =>{
     e.preventDefault();
-
     calendar.style.display = 'block'
 }
-
-
+iconCalendar.onclick = () =>{
+    calendar.style.display = 'block'
+}
+console.log(iconCalendar)
 inputCalendar.onblur = () =>{
     calendar.style.display = 'none'
 }
@@ -103,28 +114,36 @@ calendar.onmousedown = (e) =>{
 
 function chooseDate(month) {
    
-    let day = Array.from($$('.days div')) //get all days to array
-day.forEach((day)=>{
+    let days = Array.from($$('.days div')) //get all days to array
+days.forEach((day)=>{
     day.onclick = ()=>{
-        renderCalendar()
+        // renderCalendar()
         if(day.classList.contains("prev-date")){
             currentMonth=months[month - 1]
             
-        if(month==0){ 
-            currentMonth=months[11] 
-            currentYear-=1}
+            if(month==0){ 
+                currentMonth=months[11] 
+                currentYear-=1}
                 
-        }else if(day.classList.contains("next-date")){
-            currentMonth=months[month + 1]
+            }else if(day.classList.contains("next-date")){
+                currentMonth=months[month + 1]
+                
+                if(month==11){ 
+                    currentMonth=months[0]
+                    currentYear+=1}
+                    
+                }
+                
+                inputCalendar.value =`${currentMonth} - ${day.innerHTML} - ${currentYear}` 
 
-            if(month==11){ 
-                currentMonth=months[0]
-                currentYear+=1}
-
-        }
-        
-        inputCalendar.value =`${currentMonth} - ${day.innerHTML} - ${currentYear}` 
-    }
+                // choose day change background
+                days.forEach((day)=>{
+                    if(day.classList.contains("day-was-chosen")){
+                        day.classList.remove('day-was-chosen');
+                    }
+                })
+                    day.classList.add('day-was-chosen');
+            }
 })
 }
 
@@ -138,3 +157,5 @@ $('.body-package-input__filter').onmouseover = ()=>{
 $('.body-package-input__filter').onmouseout = ()=>{
     $('.filter-list-container').classList.remove('active')
 }
+
+
