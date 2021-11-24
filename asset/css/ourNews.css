@@ -184,11 +184,11 @@ background-color: rgba(0,0,0,0.2)
 }
 @media  (min-width: 770px){
     .articlesAndNews__block-item{
-        flex-direction: row
+        flex-direction: row;
+        height:30em
+
     }
-    .articlesAndNews__block-item{
-        height:26em
-    }
+    
     .main-pic-ourNews-content-container{
         justify-content: flex-start
     }
