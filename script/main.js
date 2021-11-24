@@ -81,7 +81,7 @@ function mainPicSwitcher() {
                    </div>
                 </div>
                 <div class="main-pic__item__btn2 btn">
-                buy the tour
+                <a href="../travelWeb/packages.html">buy the tour</a>
             </div>  
     
            </div>`
@@ -135,7 +135,7 @@ function mainPicSwitcher() {
                </div>
             </div>
             <div class="main-pic__item__btn2 btn">
-            buy the tour
+            <a href="../travelWeb/packages.html">buy the tour</a>
         </div>  
 
        </div>`
@@ -186,7 +186,7 @@ function mainPicSwitcher() {
                </div>
             </div>
             <div class="main-pic__item__btn2 btn">
-            buy the tour
+            <a href="../travelWeb/packages.html">buy the tour</a>
         </div>  
 
        </div>`
