@@ -10,9 +10,10 @@ const listNavSide = $('.header__navbar-flow__container')
 const closeNavBtn = $('.header__navbar-flow__iconClose')
 const background = $('.blackBackground')
 const media750px = window.matchMedia("(max-width:750px)")
-console.log(body)
+const linkNavBar = $('.header__navbar-flow__item-name')
+const btnCloseArr = [background,closeNavBtn,linkNavBar]
 
-console.log(body.classList.value)
+
 switch(body.classList.value){
     case 'aboutUs': 
     playVideo()
@@ -43,17 +44,16 @@ switch(body.classList.value){
 }
 
 function closeNavMenu() {
-    background.onclick= () =>{
-        listNavSide.classList.remove('active')
-        background.classList.remove('active')
-        body.style.overflow = 'auto'
-    }
-    closeNavBtn.onclick= () =>{
-        listNavSide.classList.remove('active')
-        background.classList.remove('active')
-        body.style.overflow = 'auto'
 
-    }
+    btnCloseArr.forEach((btn)=>{
+        btn.onclick= () =>{
+            listNavSide.classList.remove('active')
+            background.classList.remove('active')
+            body.style.overflow = 'auto'
+        }
+    })
+
+    
 }
 
 function openNavMenu() {
