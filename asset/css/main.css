@@ -490,12 +490,12 @@ opacity: 0.5;
     right: -2px;
     z-index: -1;
 }
-.limitSale-timeLimit-days-num{
+.limitSale-timeLimit-num{
     font-size: 36px;
     font-weight: 400;
     color: var(--white-color)
 }
-.limitSale-timeLimit-days-word{
+.limitSale-timeLimit-word{
     letter-spacing:2px
 }
 
@@ -514,7 +514,7 @@ opacity: 0.5;
     margin:20px 0;
     
 }
-.limitSale-timeLimit-days-word,
+.limitSale-timeLimit-word,
 .app__sale__limitSale-title1{
     font-size: 14px;
     color:var(--white-color);

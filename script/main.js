@@ -6,6 +6,18 @@ let mainPic = $('.main-pic__item')
 let mainPicArr=['asset/img/slide-01.jpg','asset/img/slide-02.jpg']
 mainPic.style.backgroundImage = `url(${mainPicArr[0]})`
 
+let daysValue = $('.limitSale-timeLimit-num-days')
+let hoursValue = $('.limitSale-timeLimit-num-hours')
+let minutesValue = $('.limitSale-timeLimit-num-minutes')
+let secondsValue = $('.limitSale-timeLimit-num-seconds')
+//set time count down
+time={
+    days:2,
+    hours:5,
+    minutes:3,
+    seconds:20
+}
+
 let contentMainPic= ` 
     
 <div class="grid2 main-pic__item-container-form">
@@ -51,6 +63,8 @@ run()
 function run() {
     mainPicSwitcher()
     resizeMainPic()
+    timeCounter(time)
+
 }
 
 function setLineStop(){
@@ -147,8 +161,33 @@ function resizeMainPic(){
 
 
 
-
-
+function timeCounter(time) {
+    let seconds = time.seconds
+    let minutes = time.minutes
+    let hours = time.hours
+    let days = time.days
+    let counter=setInterval(()=>{
+        
+        seconds==0 && minutes==0 && hours==0 && days==0 ? clearInterval(counter) :   seconds--
+        if(seconds==0&& minutes>0){
+            seconds=59;
+            minutes--
+        }
+        if(minutes==0&& hours>0){
+            hours--;
+            minutes=59
+        }
+        if(hours==0 && days>0){
+            days--;
+            hours=23
+        }
+        daysValue.innerHTML = `${days}`
+        hoursValue.innerHTML =`${hours}`
+        minutesValue.innerHTML = `${minutes}`
+        secondsValue.innerHTML = `${seconds}`
+        
+    },1000)
+}
 
 
 
