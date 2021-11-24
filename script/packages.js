@@ -99,10 +99,13 @@ inputCalendar.onfocus = (e) =>{
     e.preventDefault();
     calendar.style.display = 'block'
 }
+inputCalendar.onclick = (e) =>{
+    e.preventDefault();
+    calendar.style.display = 'block'
+}
 iconCalendar.onclick = () =>{
     calendar.style.display = 'block'
 }
-console.log(iconCalendar)
 inputCalendar.onblur = () =>{
     calendar.style.display = 'none'
 }
@@ -143,6 +146,9 @@ days.forEach((day)=>{
                     }
                 })
                     day.classList.add('day-was-chosen');
+            
+            calendar.style.display = 'none'
+                    
             }
 })
 }
