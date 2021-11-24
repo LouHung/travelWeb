@@ -131,7 +131,7 @@ select {
         outline: none;
         font-size:1.5rem;
         font-weight: 400;
-        color:#bfbfbf;
+        color:#aeaeae;
         width:100%;
         padding: 1.1em 1.6em ;
         background-color:  #f9f9f9;
@@ -140,7 +140,7 @@ select {
     }
     .body-package-input__select-day::placeholder{
         font-weight: 400;
-        color:#bfbfbf;
+        color:#aeaeae;
     }
     .body-package-input__range-price{
         display: flex;

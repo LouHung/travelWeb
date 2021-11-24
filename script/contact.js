@@ -5,7 +5,7 @@ function initMap(){
         center:{lat:10.82302,lng:106.62965}
     }
     //new map
-    var map = new google.maps.Map(document.getElementById('map'),options)
+    let map = new google.maps.Map(document.getElementById('map'),options)
 
     // //add marker
     // var marker = new google.maps.Marker({
@@ -18,7 +18,7 @@ function initMap(){
     // marker.addListener('click', function(){
     //     infoWindow.open(map, marker)
     // })
-    var marker = [
+    let marker = [
         {
             coords:{lat:10.4114,lng:107.1362},
             iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
@@ -29,8 +29,8 @@ function initMap(){
         }
     ]
 
-    marker.forEach((pos)=>{
-        addMarker(pos)
+    marker.forEach((position)=>{
+        addMarker(position)
     })
     // addMarker({
     //     coords:{lat:10.4114,lng:107.1362},
@@ -40,9 +40,10 @@ function initMap(){
     // addMarker({coords:{lat:10.687392,lng:106.593854},
     //          content: '<h1>Hi there</h1>'
     // })
+
     //add marker function
     function addMarker(props){
-        var marker = new google.maps.Marker({
+        let marker = new google.maps.Marker({
                 position:props.coords,
                 map:map,
                 // icon:props.iconImage,

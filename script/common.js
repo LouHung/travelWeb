@@ -83,7 +83,3 @@ function playVideo(){
     }
 }
 
-function toggleBackground(){
-    
-    
-}
