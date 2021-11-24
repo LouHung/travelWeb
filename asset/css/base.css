@@ -6,7 +6,7 @@
     --text-color:#727475;
     --width_slideBar:0%;
     --display:block;
-    --transition-slideBar: all 8s linear;
+    --transition-slideBar: none;
     --position-pic-flow: 55em
     --position-pic-flow2:55em
 }
