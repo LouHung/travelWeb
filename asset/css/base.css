@@ -388,11 +388,13 @@ header{
 
 /* navbar side */
 .header__navbar-flow__container.active{
-    transform:translateX(0);
+    /* display:flex; */
+    transform:translateX(-30em);
 }
 .header__navbar-flow__container{
+    /* display:none; */
     position: fixed;
-    right:0;
+    right:-30em;
     top:0;
     width:300px;
     overflow-y: scroll;
@@ -403,9 +405,9 @@ header{
     gap:40px;
     color: var(--white-color);
     height:100vh;
+    /* transform: translateX(100%); */
+    z-index:7;
     transition: all 1s ease;
-    transform: translateX(100%);
-    z-index:7
 }
 .blackBackground{
     position: absolute;
